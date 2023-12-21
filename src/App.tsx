@@ -30,7 +30,7 @@ const App = () => {
 
     useEffect(() => {
         iframeRef.current?.addEventListener('did-finish-load', () => {
-            if (text != "") {
+            if (text != "" || text.trim() !== "" || text.trim().length > 0) {
                 // @ts-ignore
                 iframeRef.current.selectAll()
                 // @ts-ignore

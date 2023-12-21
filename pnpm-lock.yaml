@@ -18,8 +18,8 @@ dependencies:
     specifier: ^2.6.0
     version: 2.6.0(@types/react@18.2.41)(react@18.2.0)
   launcher-api:
-    specifier: ^0.7.25
-    version: 0.7.25(@types/react-dom@18.2.17)(@types/react@18.2.41)(react-dom@18.2.0)(react@18.2.0)
+    specifier: ^0.7.26
+    version: 0.7.26(@types/react-dom@18.2.17)(@types/react@18.2.41)(react-dom@18.2.0)(react@18.2.0)
   react:
     specifier: ^18.2.0
     version: 18.2.0
@@ -2655,8 +2655,8 @@ packages:
     resolution: {integrity: sha512-Y+60/zizpJ3HRH8DCss+q95yr6145JXZo46OTpFvDZWLfRCE4qChOyk1b26nMaNpfHHgxagk9dXT5OP0Tfe+dQ==}
     dev: false
 
-  /launcher-api@0.7.25(@types/react-dom@18.2.17)(@types/react@18.2.41)(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-kcbS1g98TC1kl4lKBIC3pflqaXO/ggZe5TjwVCTQI7oDEkH9UpCiXU18zycr2fuyETBZnjDc0KkRmTDb7Md8vQ==}
+  /launcher-api@0.7.26(@types/react-dom@18.2.17)(@types/react@18.2.41)(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-TC6DaFpyvUf9+wlIA2AOr5as/G0szBq/xhaQ+4UZRbpLFUIfnVQ8AOfQCk1u/VnAN6xol1ehzDn/HI7a2GO0Hw==}
     peerDependencies:
       react: ^18.0.0
       react-dom: ^18.0.0

@@ -32,7 +32,7 @@ const App = () => {
         iframeRef.current?.addEventListener('did-finish-load', () => {
             if (text != "" || text.trim() !== "" || text.trim().length > 0) {
                 // @ts-ignore
-                iframeRef.current.selectAll()
+                // iframeRef.current.selectAll()
                 // @ts-ignore
                 iframeRef.current.paste()
                 // @ts-ignore

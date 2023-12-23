@@ -33,7 +33,6 @@ const App = () => {
                 // @ts-ignore
                 // send enter 打印 hello world
                 iframeRef.current.sendInputEvent({type: 'keyDown', keyCode: 'Enter'})
-                window.launcher.setClipText("")
             }
         })
     }, [iframeRef, text]);

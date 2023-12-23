@@ -1,9 +1,6 @@
 import React, {useEffect, useState} from 'react'
-import {useRequest} from 'ahooks';
 import {useKeyPress} from "ahooks";
-import {sleep} from "ahooks/es/utils/testingHelpers";
 
-const numberFormatter = new Intl.NumberFormat("en-US", {notation: "compact", compactDisplay: "short"});
 const App = () => {
     const iframeRef = React.useRef<HTMLWebViewElement>(null)
     const [text, setText] = useState('')
@@ -36,6 +33,7 @@ const App = () => {
                 // @ts-ignore
                 // send enter 打印 hello world
                 iframeRef.current.sendInputEvent({type: 'keyDown', keyCode: 'Enter'})
+                window.launcher.setClipText("")
             }
         })
     }, [iframeRef, text]);

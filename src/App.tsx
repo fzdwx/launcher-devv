@@ -1,6 +1,8 @@
 import React, {useEffect, useState} from 'react'
 import {useKeyPress} from "ahooks";
+import {getActionCommand} from "launcher-api/dist/api";
 
+const numberFormatter = new Intl.NumberFormat("en-US", {notation: "compact", compactDisplay: "short"});
 const App = () => {
     const iframeRef = React.useRef<HTMLWebViewElement>(null)
     const [text, setText] = useState('')
@@ -26,6 +28,11 @@ const App = () => {
     }, [])
 
     useEffect(() => {
+        const action = getActionCommand()
+        if (action != 'devv-clipboard') {
+            return
+        }
+
         iframeRef.current?.addEventListener('did-finish-load', () => {
             if (text != "" || text.trim() !== "" || text.trim().length > 0) {
                 // @ts-ignore
@@ -36,7 +43,6 @@ const App = () => {
             }
         })
     }, [iframeRef, text]);
-
 
     return (
         <div>

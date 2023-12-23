@@ -32,8 +32,6 @@ const App = () => {
         iframeRef.current?.addEventListener('did-finish-load', () => {
             if (text != "" || text.trim() !== "" || text.trim().length > 0) {
                 // @ts-ignore
-                // iframeRef.current.selectAll()
-                // @ts-ignore
                 iframeRef.current.paste()
                 // @ts-ignore
                 // send enter 打印 hello world

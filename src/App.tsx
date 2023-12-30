@@ -46,7 +46,7 @@ const App = () => {
 
     return (
         <div>
-            <webview ref={iframeRef} disablewebsecurity src='https://devv.ai/zh' className='w-full h-540px'>
+            <webview ref={iframeRef} disablewebsecurity src='https://devv.ai/zh' className='w-full h-100vh'>
 
             </webview>
         </div>

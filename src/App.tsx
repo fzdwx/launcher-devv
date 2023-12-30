@@ -44,9 +44,42 @@ const App = () => {
         })
     }, [iframeRef, text]);
 
+    useEffect(() => {
+        iframeRef.current.addEventListener('dom-ready', () => {
+            const div = document.createElement('div');
+            div.innerText = 'Exit'
+            div.style.position = 'fixed'
+            div.style.bottom = '30px'
+            div.style.right = '50px'
+            div.style.color = 'red'
+            div.style.cursor = 'pointer'
+            div.onclick = () => {
+                window.launcher.loadMainView()
+            }
+            iframeRef.current.shadowRoot.appendChild(div)
+
+        });
+
+//         iframeRef.current.addEventListener('did-finish-load', () => {
+//             iframeRef.current.openDevTools()
+//             iframeRef.current.executeJavaScript(`
+//             window.document.getElementsByTagName('textarea')[0].addEventListener('keydown', (e) => {
+//                 window.parent.postMessage("hello world")
+//                 console.log("post message",window.parent)
+//             })
+// `)
+//         })
+
+    }, [iframeRef]);
+
+    window.onmessage = (e) => {
+        console.log(e)
+    }
+
+
     return (
         <div>
-            <webview ref={iframeRef} disablewebsecurity src='https://devv.ai/zh' className='w-full h-100vh'>
+            <webview ref={iframeRef} src='https://devv.ai' className='w-full h-100vh'>
 
             </webview>
         </div>

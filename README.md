@@ -7,7 +7,7 @@
 ### Install
 
 ```shell
-ray ext local install -o -i '{
+yactrl ext local install -o -i '{
     "name": "Devv",
     "description": "最懂程序员的新一代 AI 搜索引擎",
     "author": "fzdwx",
